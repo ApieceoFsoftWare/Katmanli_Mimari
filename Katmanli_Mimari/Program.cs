@@ -12,8 +12,15 @@ namespace Katmanli_Mimari
         {
             // UI: User Interface
             BusinessLogicLayer businessLogicLayer = new BusinessLogicLayer();
-            businessLogicLayer.SaveData(1, "Ozan Berkay", "ÖZCAN");
-
+            int result = businessLogicLayer.SaveData(1, "Ozan Berkay", "ÖZCAN");
+            if (result > 0 )
+            {
+                Console.WriteLine("İşlem başarılı");
+            }
+            else
+            {
+                Console.WriteLine("İşlem başarısız!");
+            }
 
             /*
              * Burada yaptığımız uygulama esasında sadece katmanlı mimariyi anlamak için bir ön izleme gibidir...
